@@ -243,6 +243,7 @@ Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_N
 - Then, it will stop a running container if available and launch another Container using that image.
 - sleep for 20s.
 - Then, it will stop another running container if available and another new Container will be launched using same image.
+- Then, Restarts the nginx service to implement the changes
 - This Deployment strategy is called "Canary Deployment"
 
 ## Dockerfile
