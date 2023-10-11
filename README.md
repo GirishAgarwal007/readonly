@@ -4,7 +4,8 @@ This project demonstrates how to deploy a React application within a Docker Cont
 
 ## Description
 
-This project provides a step-by-step guide to deploy a React application within a Docker Container. The Deployment process is automated with Jenkins Pipeline to ensure continuous integration (Zero Downtime), and the Nginx server, which serves the React application, is configured on the local system.   
+This project provides a step-by-step guide to deploy a React application within a Docker Container. The Deployment process is automated with Jenkins Pipeline to ensure continuous integration (Zero Downtime), and the Nginx server, which serves the React application, is configured on the local system. I used AMI "Ubuntu 22.04" and instance type "t2.medium" for this project.
+  
 ## Our pipeline workflow:
  
 - As you push your code to the GitHub repository, The GitHub Webhook will trigger the Jenkins Pipeline.
@@ -32,7 +33,17 @@ This project provides a step-by-step guide to deploy a React application within 
 
 ## Launching an EC2 instance on AWS
 
-- Create an AWS account
-- Login to that account
-- Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/ .
-- 
+- Step 1: Create an AWS account/ Login if have already
+- Step 2: Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/ 
+- Step 3: Click on "Launch instance"
+- Step 4: Choose an Amazon Machine Image (AMI) (ex: Ubuntu 22.04)
+- Step 5: Choose an Instance Type (ex: t2.medium)
+- Step 6: Select key Pair/ Creat new if not available
+- Step 7: Configure Network Settings (Select VPC an Security Group)
+- Step 8: Configure Storage
+- Step 9: Click on "Launch instance"
+- Take SSH Session of created instance 
+
+## Jenkins Installation
+ 
+
