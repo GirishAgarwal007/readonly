@@ -24,7 +24,8 @@ This project provides a step-by-step guide to deploy a React application within 
 - [Dockerfile](#dockerfile)
 - [Install Jenkins Plugins](#install-jenkins-plugins)
 - [Nginx Configuration](#nginx-configuration)
-
+- [Configure Email Notification](#configure-email-notification)
+- [Configure Slack Notification](#configure-slack-notification)
 
 ## Prerequisites
 
@@ -276,10 +277,20 @@ Plugins are the primary means of enhancing the functionality of a Jenkins enviro
 
 * You can read all about plugins at "https://plugins.jenkins.io/"
 
+## Configure Email Notification
+
+Follow these official documents to configure Email Notifications:
+1. https://plugins.jenkins.io/mailer/
+2. https://plugins.jenkins.io/email-ext/
+
+## Configure Slack Notification
+Follow this official document to configure Slack Notifications:
+1. https://plugins.jenkins.io/slack/
+
 ## Nginx Configuration
 
 ```nginx
-upstream application {		#upstream block is used to implement load balncer 
+upstream application {		#upstream block is used to implement load balancer 
         server localhost:3000;  #one container is mapped on the port 3000 of the local server
         server localhost:3001;  #second container is mapped on the port 3001 of the local server
         }
