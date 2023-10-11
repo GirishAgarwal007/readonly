@@ -51,7 +51,7 @@ The Amazon Web Services (AWS) platform provides more than 200 fully featured ser
 Jenkins is an open source continuous integration/continuous delivery and deployment (CI/CD) automation software DevOps tool written in the Java programming language. It is used to implement CI/CD workflows, called pipelines.
 
 
-You can follow the official document:
+Follow the official document:
   https://www.jenkins.io/doc/book/installing/linux/ 
 
 ```bash
@@ -127,4 +127,24 @@ sudo apt-get install git -y
 ```bash
 # Verify installation
 sudo git version
+```
+
+## Nginx Installation
+
+Nginx is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+
+Follow the Official document:
+https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/
+
+```bash
+# Update the Ubuntu repository information
+sudo apt-get update
+```
+```bash
+# Install Nginx
+sudo apt-get install nginx
+```
+```bash
+# Verify the installation
+sudo nginx -v
 ```
