@@ -278,7 +278,21 @@ Plugins are the primary means of enhancing the functionality of a Jenkins enviro
 
 ## Nginx Configuration
 
+```nginx
+upstream application {		#upstream block is used to implement load balncer 
+        server localhost:3000;
+        server localhost:3001;
+        }
 
+server {
+
+    server_name your_domain ;
+
+    location / {
+            proxy_pass http://application; 	#proxy_pass is redirecting users to load balancer
+            try_files $uri $uri/ =404;
+    }
+```
 
 
 
