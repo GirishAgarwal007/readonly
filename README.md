@@ -202,7 +202,45 @@ When Jenkins receives a GitHub push hook, GitHub Plugin checks to see whether th
 
 ## Pipeline 
 
+Jenkins Pipeline is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins. Written in Groovy Syntax. There are two types of Pipeline, one is "Scripted Pipeline" and second is "Declarative Pipeline". Our Pipeline is a  Scripted Pipeline.
 
+```bash
+node {
+    try {
+        stage('Pull the Source Code from GitHub') { 
+        git branch: 'main', url: 'https://github.com/GirishAgarwal007/react.git'
+    }
+    stage("Dockerize the application") {
+        sh '''sudo docker build -t react:pipeline .
+              sudo docker stop app1
+              sudo docker run --rm -dit --name app1 -p 3000:3000 react:pipeline
+              sleep 20
+              sudo docker stop app2
+              sudo docker run --rm -dit --name app2 -p 3001:3000 react:pipeline
+              sudo systemctl restart nginx'''
+            }
+            if (currentBuild.result == 'UNSTABLE') {
+            emailext body: '''$PROJECT_NAME - Build # $BUILD_ID is UNSTABLE Triggered by - $BUILD_USER :
+
+Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_NAME - Build # $BUILD_ID ', to: 'girish.ongraph@gmail.com'
+    
+        slackSend color: "warning", message: "${env.JOB_NAME} # ${env.BUILD_ID} is UNSTABLE Triggered by ${env.BUILD_USER} (<${env.BUILD_URL}console|click here to view the console output>)"
+        } else {
+            emailext body: '''$PROJECT_NAME - Build # $BUILD_ID is SUCCESS Triggered by - $BUILD_USER :
+
+Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_NAME - Build # $BUILD_ID ', to: 'girish.ongraph@gmail.com'
+    
+        slackSend color: "good", message: "${env.JOB_NAME} # ${env.BUILD_ID} is SUCCESS Triggered by ${env.BUILD_USER} (<${env.BUILD_URL}console|click here to view the console output>)"
+        }
+        } catch (e) {
+            emailext body: '''$PROJECT_NAME - Build # $BUILD_ID is FAILED Triggered by - $BUILD_USER :
+
+Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_NAME - Build # $BUILD_ID ', to: 'girish.ongraph@gmail.com'
+    
+        slackSend color: "danger", message: "${env.JOB_NAME} # ${env.BUILD_ID} is FAILED Triggered by ${env.BUILD_USER} (<${env.BUILD_URL}console|click here to view the console output>)"
+        }
+}
+```
 
 
 
