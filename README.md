@@ -21,7 +21,7 @@ This project provides a step-by-step guide to deploy a React application within 
 - [Prerequisites](#prerequisites)  
 - [Launching instance on AWS](#launching-instance-on-aws)
 - [Jenkins Installation](#jenkins-installation)
-- [Docker Installaion](#docker-installation)
+- [Docker Installation](#docker-installation)
 - [Git Installation](#git-installation)
 - [Nginx Installation](#nginx-installation)
 
@@ -66,16 +66,53 @@ sudo apt-get install jenkins
 ```
 ```bash
 # Verify the installation
-  jenkins --version
+  sudo jenkins --version
 ```
 ```bash
-# Start the jenkins service
-  systemctl start jenkins
+# Start Jenkins 
+  sudo systemctl start jenkins
 ```
 ```bash
-# Enable the jenkins service
-  systemctl enable jenkins
+# Enable Jenkins
+  sudo systemctl enable jenkins
 ```
 ```bash
-# Check status of jenkins service
-  systemctl status jenkins
+# Check status of Jenkins
+  sudo systemctl status jenkins
+```
+## Docker Installation
+
+
+Docker is a software platform that allows you to build, test, and deploy applications quickly. Docker packages software into standardized units called containers that have everything the software needs to run including libraries, system tools, code, and runtime.
+
+Follow the official document:
+  https://docs.docker.com/engine/install/ubuntu/
+
+```bash
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+```
+```bash
+# Install the latest version:
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+```bash
+# Verify the installation
+sudo docker --version
+```
+```bash
+# Start Docker
+sudo systemctl start docker
+```
+```bash
+# Enable Docker
+sudo systemctl enable docker
+```
+```bash
+# Check status of Docker
+sudo systemctl status docker
+``` 
