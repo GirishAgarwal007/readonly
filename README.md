@@ -18,8 +18,8 @@ This project provides a step-by-step guide to deploy a React application within 
 
 ## Table of Contents
 
+- [Prerequisites](#prerequisites)
 - [Sample React Application](#smaple-react-application)
-- [Prerequisites](#prerequisites)  
 - [Launching instance on AWS](#launching-instance-on-aws)
 - [Jenkins Installation](#jenkins-installation)
 - [Docker Installation](#docker-installation)
@@ -34,7 +34,7 @@ This project provides a step-by-step guide to deploy a React application within 
 
 ## Sample React Application
 
-I have created a sample React Application: https://github.com/GirishAgarwal007/react.git
+I have created a sample React Application: https://github.com/GirishAgarwal007/react.git and
 Dockerfile is also available in this repo.
 
 ## Launching instance on AWS
