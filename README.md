@@ -6,7 +6,7 @@ This project demonstrates how to deploy a React application within a Docker Cont
 
 This project provides a step-by-step guide to deploy a React application within a Docker Container. The Deployment process is automated with Jenkins Pipeline to ensure continuous integration (Zero Downtime), and the Nginx server, which serves the React application, is configured on the local system. I used AMI "Ubuntu 22.04" and instance type "t2.medium" for this project.
   
-## Our pipeline workflow:
+## Pipeline Workflow:
  
 - As you push your code to the GitHub repository, The GitHub Webhook will trigger the Jenkins Pipeline.
 - Jenkins build will be triggered and the pipeline will run.
@@ -148,3 +148,35 @@ sudo apt-get install nginx
 # Verify the installation
 sudo nginx -v
 ```
+
+## 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
