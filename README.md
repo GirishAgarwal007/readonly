@@ -19,7 +19,7 @@ This project provides a step-by-step guide to deploy a React application within 
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)  
-- [Launching an EC2 instance on AWS](#launching-ec2-instance-on-aws)
+- [Launching instance on AWS](#launching-instance-on-aws)
 - [Jenkins Installation](#jenkins-installation)
 - [Docker Installaion](#docker-installation)
 - [Git Installation](#git-installation)
