@@ -19,7 +19,7 @@ This project provides a step-by-step guide to deploy a React application within 
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
-- [Sample React Application](#smaple-react-application)
+- [Sample React Application](#sample-react-application)
 - [Launching instance on AWS](#launching-instance-on-aws)
 - [Jenkins Installation](#jenkins-installation)
 - [Docker Installation](#docker-installation)
