@@ -27,6 +27,8 @@ This project provides a step-by-step guide to deploy a React application within 
 - [Nginx Installation](#nginx-installation)
 - [Jenkins Setup](#jenkins-setup)
 - [Creating Pipeline](#creating-pipeline)
+- [setup of GitHub hook trigger for GITScm polling](#setup-of-github-hook-trigger-for-gitscm-polling)
+
 
 ## Prerequisites
 
@@ -178,7 +180,18 @@ sudo nginx -v
 
 ## Creating Pipeline
 
- 
+- Step 1: Click on "New Item"
+- Step 2: Enter an item name and select "Pipeline" projct and click on "OK"
+- Step 3: Provide a Description
+- Step 4: "Enable project-based security" in general section if you want to give permissions to another jenkins users regarding this Item
+- Step 5: Select "GitHub hook trigger for GITScm polling" to get your pipeline triggered automatically if there is change in code, see this ## setup of GitHub hook trigger for GITScm polling 
+- Step 6: Provide pipeline syntax(groovy)
+- Step 7: Click on "Save"
+
+## setup of GitHub hook trigger for GITScm polling
+
+
+
 
 
 
