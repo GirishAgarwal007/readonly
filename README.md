@@ -25,7 +25,7 @@ This project provides a step-by-step guide to deploy a React application within 
 - [Install Jenkins Plugins](#install-jenkins-plugins)
 - [Configure Email Notification](#configure-email-notification)
 - [Configure Slack Notification](#configure-slack-notification)
-- [Nginx Configuration](#nginx-configuraition)
+- [Nginx Configuration](#nginx-configuration)
 - [Thank You](#thank-you)
 
 ## Prerequisites
