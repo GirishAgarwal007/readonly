@@ -28,7 +28,7 @@ This project provides a step-by-step guide to deploy a React application within 
 - [Jenkins Setup](#jenkins-setup)
 - [Creating Pipeline](#creating-pipeline)
 - [setup of GitHub hook trigger for GITScm polling](#setup-of-github-hook-trigger-for-gitscm-polling)
-
+- [Pipeline](#pipeline)
 
 ## Prerequisites
 
@@ -139,6 +139,7 @@ sudo apt-get install git -y
 # Verify installation
 sudo git version
 ```
+* You can fork this repo to your GitHub account to enable the feature of GitHub hook trigger for GITScm polling.
 ```bash
 # Clone the provided GitHub repo
 sudo git clone https://github.com/GirishAgarwal007/react.git
@@ -190,8 +191,16 @@ sudo nginx -v
 
 ## setup of GitHub hook trigger for GITScm polling
 
+When Jenkins receives a GitHub push hook, GitHub Plugin checks to see whether the hook came from a GitHub repository which matches the Git repository defined in SCM/Git section of this job. If they match and this option is enabled, GitHub Plugin triggers a one-time polling on GITScm. When GITScm polls GitHub, it finds that there is a change and initiates a build.
 
+- Step 1: Go to your GitHub repo
+- Step 2: Click on "Settings" tab 
+- Step 3: Click on "Webhooks" under the "Code and automation" section
+- Step 4: Click on "Add webhook"
+- Step 5: Enter "Payload URL: http://public-ip-of-your-instance:8080/github-webhook/
+- Step 6: Click on "Add webhook"
 
+## Pipeline 
 
 
 
