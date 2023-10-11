@@ -33,6 +33,8 @@ This project provides a step-by-step guide to deploy a React application within 
 
 ## Launching instance on AWS
 
+The Amazon Web Services (AWS) platform provides more than 200 fully featured services from data centers located all over the world, and is the world's most comprehensive cloud platform.
+
 - Step 1: Create an AWS account/ Login if have already
 - Step 2: Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/ 
 - Step 3: Click on "Launch instance"
@@ -45,5 +47,15 @@ This project provides a step-by-step guide to deploy a React application within 
 - Take SSH Session of created instance 
 
 ## Jenkins Installation
- 
 
+Jenkins is an open source continuous integration/continuous delivery and deployment (CI/CD) automation software DevOps tool written in the Java programming language. It is used to implement CI/CD workflows, called pipelines.
+
+```bash
+# installing jenkins 
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
