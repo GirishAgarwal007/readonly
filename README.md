@@ -204,7 +204,7 @@ When Jenkins receives a GitHub push hook, GitHub Plugin checks to see whether th
 
 Jenkins Pipeline is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins. Written in Groovy Syntax. There are two types of Pipeline, one is "Scripted Pipeline" and second is "Declarative Pipeline". Our Pipeline is a  Scripted Pipeline.
 
-```bash
+```groovy
 node {
     try {
         stage('Pull the Source Code from GitHub') { 
