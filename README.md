@@ -21,7 +21,7 @@ This project provides a step-by-step guide to deploy a React application within 
 - [setup of GitHub hook trigger for GITScm polling](#setup-of-github-hook-trigger-for-gitscm-polling)
 - [Pipeline](#pipeline)
 - [Understand the Pipeline Workflow](#understand-the-pipeline-workflow)
-
+- [Dockerfile](#dockerfile)
 
 ## Prerequisites
 
@@ -197,7 +197,7 @@ When Jenkins receives a GitHub push hook, GitHub Plugin checks to see whether th
 
 Jenkins Pipeline is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins. Written in Groovy Syntax. There are two types of Pipeline, one is "Scripted Pipeline" and second is "Declarative Pipeline". Our Pipeline is a  Scripted Pipeline.
 
-```groovy
+```bash
 node {
     try {
         stage('Pull the Source Code from GitHub') { 
@@ -237,13 +237,26 @@ Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_N
 
 ## Understand the Pipeline Workflow:
 
-- As you push your code to the GitHub repository, The GitHub Webhook will trigger the Jenkins Pipeline.
+- As new code is pushed to the GitHub repository, The GitHub Webhook will trigger the Jenkins Pipeline.
 - Jenkins build will be triggered and the pipeline will run.
 - Initially, it builds a docker image using Dockerfile.
-- Then, it will launch a Docker containers using that image.
+- Then, it will stop a running container if available and launch another Container using that image.
 - sleep for 20s.
-- Then, another container will be launched using same image.
+- Then, it will stop another running container if available and another new Container will be launched using same image.
+- This Deployment strategy is called "Canary Deployment"
 
+## Dockerfile
+
+Dockerfile is a text document containing all the commands the user requires to call on the command line to assemble an image. With the help of a Dockerfile, users can create an automated build that executes several command-line instructions in succession.
+
+```bash
+FROM node:18 #base image
+WORKDIR /app/ #create a directory in container and make it by default directory
+COPY . /app/ #copy the React code into the container
+RUN npm install #install the dependencies
+RUN npm run build #create a build directory to serve the application
+CMD ["npm", "start","--host=0.0.0.0" ] #serving the node application
+```
 
 
 
