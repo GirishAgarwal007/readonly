@@ -168,6 +168,18 @@ sudo apt-get install nginx
 # Verify the installation
 sudo nginx -v
 ```
+```bash
+# Start Nginx 
+sudo systemctl start nginx
+```
+```bash
+# Enable Nginx 
+sudo systemctl enable nginx
+```
+```bash
+# Check status of Nginx
+sudo systemctl status nginx
+```
 
 ## Jenkins Setup
 
