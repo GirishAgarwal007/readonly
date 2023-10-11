@@ -280,11 +280,13 @@ Plugins are the primary means of enhancing the functionality of a Jenkins enviro
 
 ```nginx
 upstream application {		#upstream block is used to implement load balncer 
-        server localhost:3000;
-        server localhost:3001;
+        server localhost:3000;  #one container is mapped on the port 3000 of the local server
+        server localhost:3001;  #second container is mapped on the port 3001 of the local server
         }
 
 server {
+	listen 80 default_server;
+        listen [::]:80 default_server;
 
     server_name your_domain ;
 
