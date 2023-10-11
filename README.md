@@ -23,6 +23,9 @@ This project provides a step-by-step guide to deploy a React application within 
 - [Understand the Pipeline Workflow](#understand-the-pipeline-workflow)
 - [Dockerfile](#dockerfile)
 - [Install Jenkins Plugins](#install-jenkins-plugins)
+- [Nginx Configuration](#nginx-configuration)
+
+
 ## Prerequisites
 
 * An AWS EC2 Instance with installed jenkins, Docker, Nginx, and Git on it.
@@ -269,6 +272,11 @@ Plugins are the primary means of enhancing the functionality of a Jenkins enviro
 - Step 4: Click on "Available plugins" 
 - Step 5: Enter plugin name you want to install: "Email Extension Plugin" to enable the Email notification and "Slack Notification Plugin" to enable the Slack notification 
 - Step 6: Select plugins and click on "install"
+- Step 7: Configure the Email notifications and Slack notifications in Jenkins system configurations.
+
+* You can read all about plugins at "https://plugins.jenkins.io/"
+
+## Nginx Configuration
 
 
 
