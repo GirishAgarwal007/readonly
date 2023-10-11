@@ -26,6 +26,7 @@ This project provides a step-by-step guide to deploy a React application within 
 - [Configure Email Notification](#configure-email-notification)
 - [Configure Slack Notification](#configure-slack-notification)
 - [Nginx Configuration](#nginx-configuraition)
+- [Thank You](#thank-you)
 
 ## Prerequisites
 
@@ -225,20 +226,20 @@ node {
             if (currentBuild.result == 'UNSTABLE') {
             emailext body: '''$PROJECT_NAME - Build # $BUILD_ID is UNSTABLE Triggered by - $BUILD_USER :
 
-Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_NAME - Build # $BUILD_ID ', to: 'girish.ongraph@gmail.com'
+Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_NAME - Build # $BUILD_ID ', to: 'any_mail@gmail.com'
     
         slackSend color: "warning", message: "${env.JOB_NAME} # ${env.BUILD_ID} is UNSTABLE Triggered by ${env.BUILD_USER} (<${env.BUILD_URL}console|click here to view the console output>)"
         } else {
             emailext body: '''$PROJECT_NAME - Build # $BUILD_ID is SUCCESS Triggered by - $BUILD_USER :
 
-Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_NAME - Build # $BUILD_ID ', to: 'girish.ongraph@gmail.com'
+Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_NAME - Build # $BUILD_ID ', to: 'any_mail@gmail.com'
     
         slackSend color: "good", message: "${env.JOB_NAME} # ${env.BUILD_ID} is SUCCESS Triggered by ${env.BUILD_USER} (<${env.BUILD_URL}console|click here to view the console output>)"
         }
         } catch (e) {
             emailext body: '''$PROJECT_NAME - Build # $BUILD_ID is FAILED Triggered by - $BUILD_USER :
 
-Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_NAME - Build # $BUILD_ID ', to: 'girish.ongraph@gmail.com'
+Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_NAME - Build # $BUILD_ID ', to: 'any_mail@gmail.com'
     
         slackSend color: "danger", message: "${env.JOB_NAME} # ${env.BUILD_ID} is FAILED Triggered by ${env.BUILD_USER} (<${env.BUILD_URL}console|click here to view the console output>)"
         }
@@ -313,9 +314,24 @@ server {
     }
 ```
 
+## Thank You
 
+Following this document, we can achieve zero downtime while deploying new version of our application.
 
+Feel free to adapt this documentation to your specific requirements and React application configuration.
 
+I hope you will find it useful. 
+
+If you have any doubt in any of the step, feel free to contact me. 
+
+THANK YOU
+
+<table>
+  <tr>
+    <th> <a href="https://www.linkedin.com/in/girish-agarwal-g7" target="_blank"><img src="https://img.icons8.com/color/452/linkedin.png" alt="linkedin" width="30"/><a/>
+</th>
+  </tr>
+</table>
 
 
 
