@@ -18,6 +18,7 @@ This project provides a step-by-step guide to deploy a React application within 
 
 ## Table of Contents
 
+- [Sample React Application](#smaple-react-application)
 - [Prerequisites](#prerequisites)  
 - [Launching instance on AWS](#launching-instance-on-aws)
 - [Jenkins Installation](#jenkins-installation)
@@ -28,8 +29,13 @@ This project provides a step-by-step guide to deploy a React application within 
 ## Prerequisites
 
 * An AWS EC2 Instance with installed jenkins, Docker, Nginx, and Git on it.
-* An another server where a sample React application Code is available and the code will be pushed to GitHub Repo.
+* A sample React application Code on a GitHub Repo.
 * Basic knowledge of npm, AWS,  Jenkins, Docker, Git, and Nginx.
+
+## Sample React Application
+
+I have created a sample React Application: https://github.com/GirishAgarwal007/react.git
+Dockerfile is also available in this repo.
 
 ## Launching instance on AWS
 
@@ -127,6 +133,10 @@ sudo apt-get install git -y
 ```bash
 # Verify installation
 sudo git version
+```
+```bash
+# Clone the provided GitHub repo
+sudo git clone https://github.com/GirishAgarwal007/react.git
 ```
 
 ## Nginx Installation
