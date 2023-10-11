@@ -285,7 +285,7 @@ upstream application {		#upstream block is used to implement load balncer
         }
 
 server {
-	listen 80 default_server;
+	listen 80 default_server;   #to make it default server
         listen [::]:80 default_server;
 
     server_name your_domain ;
