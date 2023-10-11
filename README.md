@@ -31,7 +31,7 @@ This project provides a step-by-step guide to deploy a React application within 
 * An another server where a sample React application Code is available and the code will be pushed to GitHub Repo.
 * Basic knowledge of npm, AWS,  Jenkins, Docker, Git, and Nginx.
 
-## Launching an EC2 instance on AWS
+## Launching instance on AWS
 
 - Step 1: Create an AWS account/ Login if have already
 - Step 2: Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/ 
