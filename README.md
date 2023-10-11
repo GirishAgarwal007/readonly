@@ -82,7 +82,6 @@ sudo apt-get install jenkins
 ```
 ## Docker Installation
 
-
 Docker is a software platform that allows you to build, test, and deploy applications quickly. Docker packages software into standardized units called containers that have everything the software needs to run including libraries, system tools, code, and runtime.
 
 Follow the official document:
@@ -116,3 +115,16 @@ sudo systemctl enable docker
 # Check status of Docker
 sudo systemctl status docker
 ``` 
+
+## Git Installation
+
+Git is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers who are collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different computers).
+
+```bash
+# install git 
+sudo apt-get install git -y 
+```
+```bash
+# Verify installation
+sudo git version
+```
