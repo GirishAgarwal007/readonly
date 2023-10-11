@@ -25,6 +25,8 @@ This project provides a step-by-step guide to deploy a React application within 
 - [Docker Installation](#docker-installation)
 - [Git Installation and cloning the GitHub repo](#git-installation-and-cloning-the-github-repo)
 - [Nginx Installation](#nginx-installation)
+- [Jenkins Setup](#jenkins-setup)
+- [Creating Pipeline](#creating-pipeline)
 
 ## Prerequisites
 
@@ -50,7 +52,8 @@ The Amazon Web Services (AWS) platform provides more than 200 fully featured ser
 - Step 7: Configure Network Settings (Select VPC an Security Group)
 - Step 8: Configure Storage
 - Step 9: Click on "Launch instance"
-- Step 10: Take SSH Session of created instance 
+- Step 10: port 22,80,443,8080,3000,3001 must be allowed in security group that you have attached with instance.
+- Step 11: Take SSH Session of created instance 
 
 ## Jenkins Installation
 
@@ -159,9 +162,23 @@ sudo apt-get install nginx
 sudo nginx -v
 ```
 
-## 
+## Jenkins Setup
 
+- Step 1: Open any web browser and search "http://public-ip-of-your-instance:8080"
+- Step 2: Unlock Jenkins
+	  Enter the password provided by jenkins at "/var/lib/jenkins/secrets/initialAdminPassword"
+- Step 3: Customize Jenkins
+	  Select "Install suggested plugins"
+- Step 4: Create First Admin User
+	  Enter details -----> click on "Save and Continue"
+- Step 5: Instance Configuration
+	  click on "Save and Finish"
+- Step 6: Jenkins is ready!
+	  click on "Start using Jenkins"
 
+## Creating Pipeline
+
+ 
 
 
 
