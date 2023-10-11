@@ -197,7 +197,7 @@ When Jenkins receives a GitHub push hook, GitHub Plugin checks to see whether th
 - Step 2: Click on "Settings" tab 
 - Step 3: Click on "Webhooks" under the "Code and automation" section
 - Step 4: Click on "Add webhook"
-- Step 5: Enter "Payload URL: http://public-ip-of-your-instance:8080/github-webhook/
+- Step 5: Enter "Payload URL:" http://public-ip-of-your-instance:8080/github-webhook/
 - Step 6: Click on "Add webhook"
 
 ## Pipeline 
