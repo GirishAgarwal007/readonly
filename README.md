@@ -23,9 +23,9 @@ This project provides a step-by-step guide to deploy a React application within 
 - [Understand the Pipeline Workflow](#understand-the-pipeline-workflow)
 - [Dockerfile](#dockerfile)
 - [Install Jenkins Plugins](#install-jenkins-plugins)
-- [Nginx Configuration](#nginx-configuration)
 - [Configure Email Notification](#configure-email-notification)
 - [Configure Slack Notification](#configure-slack-notification)
+- [Nginx Configuration](#nginx-configuraition)
 
 ## Prerequisites
 
