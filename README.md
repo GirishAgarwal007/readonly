@@ -22,7 +22,7 @@ This project provides a step-by-step guide to deploy a React application within 
 - [Pipeline](#pipeline)
 - [Understand the Pipeline Workflow](#understand-the-pipeline-workflow)
 - [Dockerfile](#dockerfile)
-
+- [Install Jenkins Plugins](#install-jenkins-plugins)
 ## Prerequisites
 
 * An AWS EC2 Instance with installed jenkins, Docker, Nginx, and Git on it.
@@ -244,7 +244,7 @@ Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_N
 - sleep for 20s.
 - Then, it will stop another running container if available and another new Container will be launched using same image.
 - Then, Restarts the nginx service to implement the changes
-- This Deployment strategy is called "Canary Deployment"
+- Notification on Email and Notification on Slack will be sent about every build. And the notification contains PROJECT_NAME, BUILD_ID, BUILD_USER, JOB_NAME, and BUILD_URL 
 
 ## Dockerfile
 
@@ -259,9 +259,16 @@ RUN npm run build #create a build directory to serve the application
 CMD ["npm", "start","--host=0.0.0.0" ] #serving the node application
 ```
 
+## Install Jenkins Plugins
 
+Plugins are the primary means of enhancing the functionality of a Jenkins environment to suit organization- or user-specific needs. There are over a thousand different plugins which can be installed on a Jenkins controller and to integrate various build tools, cloud providers, analysis tools, and much more.
 
-
+- Step 1: Go to jenkins Dashboard
+- Step 2: Click on "Manage  Jenkins"
+- Step 3: Click on "Plugins" under "System Configuration" section
+- Step 4: Click on "Available plugins" 
+- Step 5: Enter plugin name you want to install: "Email Extension Plugin" to enable the Email notification and "Slack Notification Plugin" to enable the Slack notification 
+- Step 6: Select plugins and click on "install"
 
 
 
