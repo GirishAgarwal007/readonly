@@ -88,6 +88,12 @@ sudo apt-get install jenkins
 # Check status of Jenkins
   sudo systemctl status jenkins
 ```
+* Provide jenkins user sudo power:
+sudo vim /etc/sudoers.d/jenkins
+```bash
+jenkins ALL=(ALL) NOPASSWD:ALL
+```
+
 ## Docker Installation
 
 Docker is a software platform that allows you to build, test, and deploy applications quickly. Docker packages software into standardized units called containers that have everything the software needs to run including libraries, system tools, code, and runtime.
