@@ -50,6 +50,10 @@ The Amazon Web Services (AWS) platform provides more than 200 fully featured ser
 
 Jenkins is an open source continuous integration/continuous delivery and deployment (CI/CD) automation software DevOps tool written in the Java programming language. It is used to implement CI/CD workflows, called pipelines.
 
+
+You can follow the official document:
+  https://www.jenkins.io/doc/book/installing/linux/ 
+
 ```bash
 # installing jenkins 
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
@@ -60,5 +64,3 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 
-- You can follow the official document:
-  https://www.jenkins.io/doc/book/installing/linux/ 
