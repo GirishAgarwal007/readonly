@@ -44,7 +44,7 @@ The Amazon Web Services (AWS) platform provides more than 200 fully featured ser
 - Step 7: Configure Network Settings (Select VPC an Security Group)
 - Step 8: Configure Storage
 - Step 9: Click on "Launch instance"
-- Take SSH Session of created instance 
+- Step 10: Take SSH Session of created instance 
 
 ## Jenkins Installation
 
@@ -64,5 +64,18 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 ```
-- Verify the installation:
+```bash
+# Verify the installation
   jenkins --version
+```
+```bash
+# Start the jenkins service
+  systemctl start jenkins
+```
+```bash
+# Enable the jenkins service
+  systemctl enable jenkins
+```
+```bash
+# Check status of jenkins service
+  systemctl status jenkins
